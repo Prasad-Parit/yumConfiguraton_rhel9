@@ -1,0 +1,25 @@
+#df -h 
+#cd /run/media/root/RHEL-9-1-0-BaseOS-x86_64 (Path where all software is located)#
+#cd Appstream/Packages/
+#ls firefox
+#rpm -i -v firefox-91.11.0-2.el9.x86_64.rpm (V -- verbosity --> detailed info)
+#rpm -i -v -h firefox-91.11.0-2.el9.x86_64.rpm (h --hash --> detailed info)
+#rpm -ivh firefox-91.11.0-2.el9.x86_64.rpm (Standard command)
+--------------------------------------------------------------------------------
+YUM CONFIGURATION-
+#cd /etc/yum.repos.d/
+#vim pras.repo
+-------
+[dvd1]
+baseurl=file:///run/media/root/RHEL-9-1-0-BaseOS-x86_64/AppStream
+gpgcheck=0
+
+
+[dvd2]
+baseurl=file:///run/media/root/RHEL-9-1-0-BaseOS-x86_64/BaseOS
+gpgcheck=0
+-----
+#yum install httpd
+#yum remove httpd
+---------------
+#dnf install httpd
